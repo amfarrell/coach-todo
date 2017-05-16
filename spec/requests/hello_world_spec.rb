@@ -1,10 +1,7 @@
 require 'spec_helper'
+require 'pry'
 
-describe HelloWorld, type: :request do
-  before :each do
-    create :user
-  end
-
+RSpec.describe "GET /hello/:visitor", type: :request do
   it 'returns 200 when visiting hello world' do
     get '/hello/world'
 
